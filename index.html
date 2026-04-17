@@ -12,6 +12,10 @@
             --text-secondary: #86868b;
             --card-bg: rgba(255, 255, 255, 0.45);
             --card-border: rgba(255, 255, 255, 0.9);
+            --font-size-h1: 88px;
+            --font-size-h2: 26px;
+            --font-size-level3: 24px;
+            --font-size-section-title: 42px;
             --shadow-base: 
                 0 15px 35px rgba(0, 0, 0, 0.05),
                 0 5px 15px rgba(0, 0, 0, 0.02),
@@ -38,6 +42,7 @@
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
             position: relative;
+            font-size: 22px;
         }
 
         /* ---------------- 反色鼠标光圈 ---------------- */
@@ -132,7 +137,7 @@
         nav a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 12px;
+            font-size: 20px;
             letter-spacing: 1.5px;
             margin: 0 25px;
             transition: color 0.3s;
@@ -173,12 +178,12 @@
             display: grid; 
             place-items: center;
             position: relative;
-            margin: 0 0 40px 0; /* 修改：拉大标题下方的间距 */
+            margin: 0 0 90px 0; /* 增加：让标题与下方内容呼吸感更强 */
         }
 
         .title-reveal-container h1 {
             grid-area: 1 / 1; 
-            font-size: 60px; 
+            font-size: var(--font-size-h1); 
             font-weight: 600; 
             letter-spacing: 0.02em;
             margin: 0;
@@ -225,10 +230,10 @@
         }
 
         .hero h2 {
-            font-size: 15px; 
+            font-size: var(--font-size-h2); 
             font-weight: 400; 
             color: #111111;
-            margin: 0 0 6px 0; /* 修改：缩小了 h2 下方的间距，让其与下面一行更紧凑 */
+            margin: 0 0 16px 0; /* 适度拉开与下方信息的间距 */
             letter-spacing: 0.15em;
             text-transform: uppercase;
         }
@@ -255,7 +260,7 @@
 
         .info-reveal-container .info-text {
             grid-area: 1 / 1;
-            font-size: 14px;
+            font-size: var(--font-size-level3);
             color: #555557;
             letter-spacing: 0.5px;
             font-weight: 400;
@@ -276,7 +281,7 @@
         }
 
         .info-inline span {
-            font-size: 14px;
+            font-size: var(--font-size-level3);
             color: #555557; 
             letter-spacing: 0.5px;
             font-weight: 400;
@@ -290,7 +295,7 @@
         .info-inline .separator {
             color: #d2d2d7; 
             font-weight: 300;
-            font-size: 12px;
+            font-size: 18px;
             user-select: none; 
         }
 
@@ -340,7 +345,7 @@
         }
 
         .tech-card h3 {
-            font-size: 18px; 
+            font-size: 26px; 
             font-weight: 500; 
             margin-top: 0;
             margin-bottom: 20px;
@@ -360,7 +365,7 @@
         }
 
         .tech-card p {
-            font-size: 14px; 
+            font-size: 22px; 
             line-height: 1.8;
             color: #2c2c2e; 
             margin: 0;
@@ -388,7 +393,7 @@
             text-align: center;
             padding: 80px 20px 60px;
             color: var(--text-secondary);
-            font-size: 12px;
+            font-size: 18px;
             margin-top: 80px;
             position: relative;
         }
@@ -451,9 +456,9 @@
 
         /* ---------------- 技能模块样式 ---------------- */
         .section-title {
-            font-size: 23px;
+            font-size: var(--font-size-section-title);
             font-weight: 500;
-            margin: 89px 0 34px 0;
+            margin: 100px 0 40px 0;
             text-align: center;
         }
 
@@ -465,7 +470,7 @@
         .skills-container {
             display: flex;
             flex-direction: column;
-            gap: 60px;
+            gap: 80px;
         }
 
         .experience-section {
@@ -476,14 +481,14 @@
         .project-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(260px, 1fr));
-            gap: 24px;
+            gap: 32px;
             align-items: stretch;
         }
 
         .project-card {
             background: rgba(255, 255, 255, 0.55);
             border-radius: 28px;
-            padding: 28px;
+            padding: 36px;
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
             backdrop-filter: blur(24px) saturate(140%);
             -webkit-backdrop-filter: blur(24px) saturate(140%);
@@ -495,13 +500,13 @@
         }
 
         .project-card h4 {
-            font-size: 18px;
+            font-size: 26px;
             margin: 0;
             color: var(--text-primary);
         }
 
         .project-card p {
-            font-size: 14px;
+            font-size: 20px;
             line-height: 1.8;
             color: #4c4c52;
             margin: 0;
@@ -516,7 +521,7 @@
             border-radius: 999px;
             background: rgba(22, 93, 255, 0.12);
             color: #165DFF;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 600;
             letter-spacing: 0.05em;
             text-transform: uppercase;
@@ -526,7 +531,7 @@
         .skills-row {
             display: flex;
             justify-content: center;
-            gap: 70px;
+            gap: 100px;
         }
 
         .skill-module {
@@ -535,13 +540,13 @@
         }
 
         .skill-module-small {
-            width: 250px;
-            height: 110px;
+            width: 380px;
+            height: 180px;
         }
 
         .skill-module-large {
-            width: 480px;
-            height: 170px;
+            width: 860px;
+            height: 300px;
             align-self: center;
         }
 
@@ -586,17 +591,28 @@
             justify-content: center;
             text-align: center;
         }
+
+        .skill-module-large .skill-module-back {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
         
         .skill-module-small .skill-details {
             display: inline-block;
             text-align: left;
         }
 
+        .skill-module-large .skill-details {
+            display: inline-block;
+            text-align: left;
+        }
+
         .skill-categories-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
-            gap: 20px;
+            gap: 40px;
         }
 
         .skill-category-column {
@@ -638,7 +654,7 @@
         }
 
         .skill-module h4 {
-            font-size: 16px;
+            font-size: 22px;
             font-weight: 500;
             margin: 0 0 15px 0;
             text-align: center;
@@ -649,7 +665,7 @@
         }
 
         .skill-category h5 {
-            font-size: 13px;
+            font-size: 22px;
             font-weight: 600;
             margin: 0 0 8px 0;
             color: var(--text-primary);
@@ -662,7 +678,7 @@
         }
 
         .skill-details li {
-            font-size: 12px;
+            font-size: 17px;
             color: var(--text-secondary);
             margin-bottom: 6px;
             position: relative;
@@ -675,7 +691,7 @@
             left: 0;
             color: #165DFF;
             font-weight: bold;
-            font-size: 10px;
+            font-size: 16px;
         }
 
         /* ---------------- 联系方式样式 ---------------- */
@@ -708,7 +724,7 @@
         /* ---------------- 移动端适配 ---------------- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 36px; }  
-            .hero h2 { font-size: 13px; }
+            .hero h2 { font-size: 16px; }
             .grid-section { grid-template-columns: 1fr; gap: 20px; }
             .tech-card { padding: 30px; }
             .orb-1 { width: 100vw; height: 100vh; }
@@ -728,9 +744,9 @@
             .skill-module-large { height: 400px; }
             .skill-module-front, .skill-module-back { padding: 15px; }
             .skill-module-icon { font-size: 32px; }
-            .skill-module h4 { font-size: 14px; }
-            .skill-category h5 { font-size: 12px; }
-            .skill-details li { font-size: 11px; }
+            .skill-module h4 { font-size: 15px; }
+            .skill-category h5 { font-size: 13px; }
+            .skill-details li { font-size: 12px; }
             .skill-module-back { justify-content: flex-start; }
             .skill-categories-container { flex-direction: column; gap: 15px; }
             .skill-module-small .skill-module-back { justify-content: center; }
@@ -890,15 +906,15 @@
 
 
     </div> <footer id="contact">
-        <h3 style="text-align: center; font-size: 40px; font-weight: 500; margin: 0 0 34px 0; color: var(--text-primary);">Contact me</h3>
+        <h3 class="section-title" style="margin: 0 0 34px 0; color: var(--text-primary);">Contact me</h3>
         <div class="contact-section">
             <div class="fade-up hover-target" style="transition-delay: 0.3s;">
-                <h3 style="font-size: 14px; color: #888; font-weight: 300; margin: 0 0 8px 0;">Direct Email</h3>
+                <h3 style="font-size: 15px; color: #888; font-weight: 300; margin: 0 0 8px 0;">Direct Email</h3>
                 <p style="font-size: 23px; margin: 0; font-weight: 500; letter-spacing: 1px;">1040612342@qq.com</p>
             </div>
             
             <div class="github-section fade-up hover-target" style="transition-delay: 0.4s;">
-                <h3 style="font-size: 14px; color: #888; font-weight: 300; margin: 0 0 8px 0;">GitHub</h3>
+                <h3 style="font-size: 15px; color: #888; font-weight: 300; margin: 0 0 8px 0;">GitHub</h3>
                 <a href="https://github.com/Ja-Ra1nnn?tab=repositories" target="_blank" class="btn-premium hover-target">
                     View Repositories
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -940,8 +956,8 @@
         let cursorX = mouseX;
         let cursorY = mouseY;
         
-        let targetRadius = 80; 
-        let currentRadius = 80;
+        let targetRadius = 100; 
+        let currentRadius = 100;
 
         const engText = titleReveal ? titleReveal.querySelector('.english-text') : null;
         const chiText = titleReveal ? titleReveal.querySelector('.chinese-text') : null;
@@ -996,17 +1012,17 @@
             target.addEventListener('mouseenter', () => {
                 // 保持当前位置的光标大小，不进行膨胀
                 if ((navRect && mouseY < navRect.bottom) || (heroRect && mouseY > heroRect.bottom)) {
-                    targetRadius = 8; // 导航或个人信息以下
+                    targetRadius = 12; // 导航或个人信息以下
                 } else {
-                    targetRadius = 80; // 个人信息区域
+                    targetRadius = 100; // 个人信息区域
                 }
             });
             target.addEventListener('mouseleave', () => {
                 // 离开时根据鼠标位置设置探照灯大小
                 if ((navRect && mouseY < navRect.bottom) || (heroRect && mouseY > heroRect.bottom)) {
-                    targetRadius = 8; // 导航或个人信息以下
+                    targetRadius = 12; // 导航或个人信息以下
                 } else {
-                    targetRadius = 80; // 个人信息区域
+                    targetRadius = 100; // 个人信息区域
                 }
             });
         });
