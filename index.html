@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ja_rain | 探索数学与未来的边界</title>
+    <title>Ja_rain | Ja_rain的个人简历</title>
     <style>
         /* 浅色磨砂高级感变量 */
         :root {
@@ -164,7 +164,7 @@
         .gradient-text-black {
             background: linear-gradient(135deg, #000000 0%, #2a2a2a 100%);
             -webkit-background-clip: text;
-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             color: #000; 
         }
@@ -264,37 +264,6 @@ background-clip: text;
 
         .info-reveal-container .info-text:hover:not(.separator) {
             color: #000;
-        }
-
-        .info-reveal-container .english-text {
-            -webkit-mask-image: radial-gradient(
-                circle at var(--mask-x, -999px) var(--mask-y, -999px), 
-                transparent var(--mask-radius, 0px), 
-                black calc(var(--mask-radius, 0px) + 1px)
-            );
-            mask-image: radial-gradient(
-                circle at var(--mask-x, -999px) var(--mask-y, -999px), 
-                transparent var(--mask-radius, 0px), 
-                black calc(var(--mask-radius, 0px) + 1px)
-            );
-            will-change: mask-image, -webkit-mask-image;
-            transform: translateZ(0);
-        }
-
-        .info-reveal-container .chinese-text {
-            -webkit-mask-image: radial-gradient(
-                circle at var(--mask-x, -999px) var(--mask-y, -999px), 
-                black calc(var(--mask-radius, 0px) - 1px), 
-                transparent var(--mask-radius, 0px)
-            );
-            mask-image: radial-gradient(
-                circle at var(--mask-x, -999px) var(--mask-y, -999px), 
-                black calc(var(--mask-radius, 0px) - 1px), 
-                transparent var(--mask-radius, 0px)
-            );
-            pointer-events: none;
-            will-change: mask-image, -webkit-mask-image;
-            transform: translateZ(0);
         }
 
         .info-inline {
@@ -445,33 +414,6 @@ background-clip: text;
         footer a:hover {
             opacity: 0.6;
         }
-        /* ---------------- 无边框高级感模块 ---------------- */
-        
-        /* 技能区无框排版 */
-        .frameless-skills {
-            display: grid;
-            grid-template-columns: 1fr 1.618fr; /* 再次呼应黄金比例 */
-            gap: 55px;
-            margin-top: 89px;
-        }
-
-        .skill-item {
-            position: relative;
-        }
-
-        .skill-item h3 {
-            font-size: 23px;
-            font-weight: 500;
-            margin-bottom: 13px;
-        }
-
-        .skill-item p {
-            font-size: 14px;
-            line-height: 1.618;
-            color: #555557;
-            margin: 0;
-            font-weight: 300;
-        }
 
         /* 高级感按钮 */
         .btn-premium {
@@ -516,13 +458,69 @@ background-clip: text;
         }
 
         .skills-section {
-            margin-top: 40px;
+            margin-top: 160px;
+            padding-top: 15px;
         }
 
         .skills-container {
             display: flex;
             flex-direction: column;
             gap: 60px;
+        }
+
+        .experience-section {
+            margin-top: 80px;
+            padding: 30px 0 10px 0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(260px, 1fr));
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.55);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(24px) saturate(140%);
+            -webkit-backdrop-filter: blur(24px) saturate(140%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            border: none;
+        }
+
+        .project-card h4 {
+            font-size: 18px;
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .project-card p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #4c4c52;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(22, 93, 255, 0.12);
+            color: #165DFF;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            width: fit-content;
         }
 
         .skills-row {
@@ -538,12 +536,12 @@ background-clip: text;
 
         .skill-module-small {
             width: 250px;
-            height: 150px;
+            height: 110px;
         }
 
         .skill-module-large {
             width: 480px;
-            height: 220px;
+            height: 170px;
             align-self: center;
         }
 
@@ -588,7 +586,7 @@ background-clip: text;
             justify-content: center;
             text-align: center;
         }
-
+        
         .skill-module-small .skill-details {
             display: inline-block;
             text-align: left;
@@ -684,20 +682,26 @@ background-clip: text;
         .contact-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 55px;
+            gap: 40px;
             margin-top: 89px;
             padding-bottom: 34px;
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            place-items: center;
+        }
+
+        .contact-section > div {
+            text-align: center;
         }
 
         .github-section {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .github-section .btn-premium {
             margin-top: 12px;
-            align-self: flex-start;
+            align-self: center;
         }
 
 
@@ -712,7 +716,7 @@ background-clip: text;
             .english-text { display: none; }
             .chinese-text { mask-image: none; -webkit-mask-image: none; pointer-events: auto; }
             html, nav a, .tech-card, .skill-card, .skill-module, footer a { cursor: auto; }
-            .info-inline gap { gap: 8px; }
+            .info-inline { gap: 8px; }
             .info-section { flex-direction: column; gap: 8px; }
             .info-section .separator { display: none; }
             .info-reveal-container .english-text { display: none; }
@@ -745,14 +749,14 @@ background-clip: text;
     <div class="bg-glass"></div>
 
     <nav>
-        <a href="#about" class="hover-target">ABOUT</a>
-        <a href="#skills" class="hover-target">EXPERTISE</a>
-        <a href="#experience" class="hover-target">JOURNEY</a>
-        <a href="#contact" class="hover-target">CONTACT</a>
+        <a href="#about" class="hover-target">About</a>
+        <a href="#skills" class="hover-target">Professional Skills</a>
+        <a href="#experience" class="hover-target">Experience</a>
+        <a href="#contact" class="hover-target">Contact</a>
     </nav>
 
     <div class="container">
-        <section class="hero fade-up">
+        <section id="about" class="hero fade-up">
             <div class="title-reveal-container hover-target" id="titleReveal">
                 <h1 class="gradient-text-black english-text">Hello, I'm <span class="light-text">Ja_rain</span></h1>
                 <h1 class="gradient-text-black chinese-text">你好，我是 <span class="light-text">许家润</span></h1>
@@ -784,13 +788,6 @@ background-clip: text;
             </div>
         </section>
 
-        <!-- 关于模块 -->
-        <div id="about" class="tech-card full-width fade-up hover-target" style="transition-delay: 0.1s;">
-            <span class="math-deco">∇f(x)</span>
-            <h3><span class="gradient-text-black">纯粹与应用的交汇</span></h3>
-            <p>我是 Ja_rain，来自常州大学华罗庚学院，主攻数学与应用数学专业。专注于将抽象数学工具转化为解决复杂现实问题的智能引擎。</p>
-        </div>
-
         <!-- 技能模块 -->
         <div id="skills" class="skills-section fade-up" style="transition-delay: 0.2s;">
             <h3 class="section-title gradient-text-black">专业技能</h3>
@@ -804,7 +801,6 @@ background-clip: text;
                             <h4>数学能力</h4>
                         </div>
                         <div class="skill-module-back">
-                            <h4>数学能力</h4>
                             <ul class="skill-details">
                                 <li>数学建模</li>
                                 <li>优化算法</li>
@@ -821,7 +817,6 @@ background-clip: text;
                             <h4>计算机基础</h4>
                         </div>
                         <div class="skill-module-back">
-                            <h4>计算机基础</h4>
                             <ul class="skill-details">
                                 <li>计算机组成原理</li>
                                 <li>操作系统</li>
@@ -841,7 +836,6 @@ background-clip: text;
                             <h4>编程与开发</h4>
                         </div>
                         <div class="skill-module-back">
-                            <h4>编程与开发</h4>
                             <div class="skill-categories-container">
                                 <div class="skill-category-column">
                                     <h5>语言</h5>
@@ -877,9 +871,28 @@ background-clip: text;
             </div>
         </div>
 
-        <!-- 联系方式 -->
+        <!-- 项目经历 -->
+        <div id="experience" class="experience-section fade-up" style="transition-delay: 0.3s;">
+            <h3 class="section-title gradient-text-black">项目经历</h3>
+            <div class="project-grid">
+                <div class="project-card hover-target">
+                    <div class="project-badge">Titanic</div>
+                    <h4>基于机器学习的 Titanic 数据预处理与清洗</h4>
+                    <p>构建精细化数据处理流程，覆盖缺失值补全、异常值处理与类别编码，提升特征质量，为模型训练提供稳定输入。</p>
+                </div>
+                <div class="project-card hover-target">
+                    <div class="project-badge">Yolov8n-pose</div>
+                    <h4>基于 Yolov8n-pose 的人体姿态检验识别模型</h4>
+                    <p>实现轻量级关键点检测，姿态分类与小目标识别，输出可视化姿态结果，FPS大幅度提升</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div> <footer id="contact">
+        <h3 style="text-align: center; font-size: 40px; font-weight: 500; margin: 0 0 34px 0; color: var(--text-primary);">Contact me</h3>
         <div class="contact-section">
-            <div id="experience" class="fade-up hover-target" style="transition-delay: 0.3s;">
+            <div class="fade-up hover-target" style="transition-delay: 0.3s;">
                 <h3 style="font-size: 14px; color: #888; font-weight: 300; margin: 0 0 8px 0;">Direct Email</h3>
                 <p style="font-size: 23px; margin: 0; font-weight: 500; letter-spacing: 1px;">1040612342@qq.com</p>
             </div>
@@ -892,12 +905,7 @@ background-clip: text;
                 </a>
             </div>
         </div>
-
-
-
-    </div> <footer id="contact">
-        <p>1040612342@qq.com</p>
-        <p>Copyright © 2026 Ja_rain. All rights reserved.</p>
+        <p>Copyright © 2026.04.17  Ja_rain. All rights reserved.</p>
     </footer>
     <script>
         // 1. 丝滑滚动出现动画
@@ -975,9 +983,11 @@ background-clip: text;
         window.addEventListener('resize', updateRects, { passive: true });
         window.addEventListener('scroll', updateRects, { passive: true });
 
-        // 4. 鼠标位置检测 - 个人信息以下区域探照灯调小
+        // 4. 鼠标位置检测 - 导航和个人信息以下区域探照灯调小
         const heroSection = document.querySelector('.hero');
+        const navElement = document.querySelector('nav');
         let heroRect = heroSection ? heroSection.getBoundingClientRect() : null;
+        let navRect = navElement ? navElement.getBoundingClientRect() : null;
 
         // 3. 移除光标膨胀效果，保持基于位置的大小设置
         const hoverTargets = document.querySelectorAll('.hover-target');
@@ -985,16 +995,16 @@ background-clip: text;
         hoverTargets.forEach(target => {
             target.addEventListener('mouseenter', () => {
                 // 保持当前位置的光标大小，不进行膨胀
-                if (heroRect && mouseY > heroRect.bottom) {
-                    targetRadius = 8; // 个人信息以下
+                if ((navRect && mouseY < navRect.bottom) || (heroRect && mouseY > heroRect.bottom)) {
+                    targetRadius = 8; // 导航或个人信息以下
                 } else {
                     targetRadius = 80; // 个人信息区域
                 }
             });
             target.addEventListener('mouseleave', () => {
                 // 离开时根据鼠标位置设置探照灯大小
-                if (heroRect && mouseY > heroRect.bottom) {
-                    targetRadius = 8; // 个人信息以下
+                if ((navRect && mouseY < navRect.bottom) || (heroRect && mouseY > heroRect.bottom)) {
+                    targetRadius = 8; // 导航或个人信息以下
                 } else {
                     targetRadius = 80; // 个人信息区域
                 }
@@ -1007,17 +1017,26 @@ background-clip: text;
             }
         }
 
+        function updateNavRect() {
+            if (navElement) {
+                navRect = navElement.getBoundingClientRect();
+            }
+        }
+
         updateHeroRect();
+        updateNavRect();
         window.addEventListener('resize', updateHeroRect, { passive: true });
         window.addEventListener('scroll', updateHeroRect, { passive: true });
+        window.addEventListener('resize', updateNavRect, { passive: true });
+        window.addEventListener('scroll', updateNavRect, { passive: true });
 
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
 
-            // 检测鼠标是否在个人信息以下
-            if (heroRect && mouseY > heroRect.bottom) {
-                // 鼠标在个人信息以下，使用很小的探照灯
+            // 检测鼠标是否在导航或个人信息以下
+            if ((navRect && mouseY < navRect.bottom) || (heroRect && mouseY > heroRect.bottom)) {
+                // 鼠标在导航或个人信息以下，使用很小的探照灯
                 if (!hoverTargets.some(target => target.matches(':hover'))) {
                     targetRadius = 20; // 调很小探照灯
                 }
