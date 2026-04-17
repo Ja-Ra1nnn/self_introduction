@@ -723,35 +723,82 @@
 
         /* ---------------- 移动端适配 ---------------- */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }  
-            .hero h2 { font-size: 16px; }
+            nav a { margin: 0 10px; font-size: 14px; }
+            .container { padding: 80px 20px; }
+            .hero { height: auto; padding: 100px 0 60px; }
+            .hero h1 { font-size: 32px; }  
+            .hero h2 { font-size: 18px; margin-bottom: 20px; }
+            .title-reveal-container { margin-bottom: 40px; }
+            
             .grid-section { grid-template-columns: 1fr; gap: 20px; }
             .tech-card { padding: 30px; }
             .orb-1 { width: 100vw; height: 100vh; }
             .cursor-follower { display: none; }
             .english-text { display: none; }
-            .chinese-text { mask-image: none; -webkit-mask-image: none; pointer-events: auto; }
+            .chinese-text { mask-image: none !important; -webkit-mask-image: none !important; pointer-events: auto; opacity: 1; visibility: visible; }
             html, nav a, .tech-card, .skill-card, .skill-module, footer a { cursor: auto; }
-            .info-inline { gap: 8px; }
-            .info-section { flex-direction: column; gap: 8px; }
+            
+            .info-section { flex-direction: column; gap: 12px; }
             .info-section .separator { display: none; }
+            .info-reveal-container .info-text { font-size: 18px; position: static; }
             .info-reveal-container .english-text { display: none; }
-            .info-reveal-container .chinese-text { mask-image: none; -webkit-mask-image: none; pointer-events: auto; }
-            .section-title { margin: 55px 0 21px 0; font-size: 20px; }
-            .skills-row { flex-direction: column; align-items: center; }
-            .skill-module-small, .skill-module-large { width: 100%; max-width: 300px; }
-            .skill-module-small { height: 180px; }
-            .skill-module-large { height: 400px; }
-            .skill-module-front, .skill-module-back { padding: 15px; }
-            .skill-module-icon { font-size: 32px; }
-            .skill-module h4 { font-size: 15px; }
-            .skill-category h5 { font-size: 13px; }
-            .skill-details li { font-size: 12px; }
-            .skill-module-back { justify-content: flex-start; }
-            .skill-categories-container { flex-direction: column; gap: 15px; }
-            .skill-module-small .skill-module-back { justify-content: center; }
-            .contact-section { grid-template-columns: 1fr; gap: 34px; margin-top: 55px; }
-            .github-section .btn-premium { width: 100%; justify-content: space-between; padding: 13px 21px; }
+            .info-reveal-container .chinese-text { display: block; }
+            
+            .section-title { margin: 60px 0 30px 0; font-size: 28px; }
+            .skills-container { gap: 30px; }
+            .skills-row { flex-direction: column; align-items: center; gap: 30px; }
+            
+            .skill-module-small, .skill-module-large { 
+                width: 100%; 
+                max-width: 100%; 
+                height: auto;
+                min-height: 160px;
+                aspect-ratio: auto;
+            }
+            .skill-module-large { min-height: 280px; }
+            .skill-module-front, .skill-module-back { 
+                padding: 25px; 
+                position: relative; 
+                transform: none !important;
+                backface-visibility: visible;
+                height: auto;
+            }
+            .skill-module-back { 
+                display: block; 
+                position: relative; 
+                transform: none !important; 
+                margin-top: -1px; 
+                border-top: none;
+                border-radius: 0 0 16px 16px;
+                padding-top: 0;
+            }
+            .skill-module-front {
+                border-radius: 16px 16px 0 0;
+                padding-bottom: 10px;
+            }
+            .skill-module-small .skill-module-back {
+                justify-content: flex-start;
+                text-align: left;
+            }
+            .skill-module-small .skill-details {
+                display: block;
+            }
+            .skill-module:hover .skill-module-front { transform: none; }
+            .skill-module:hover .skill-module-back { transform: none; }
+            
+            .skill-module-icon { font-size: 32px; margin-bottom: 10px; }
+            .skill-module h4 { font-size: 18px; margin-bottom: 10px; }
+            .skill-category h5 { font-size: 16px; }
+            .skill-details li { font-size: 14px; }
+            
+            .project-grid { grid-template-columns: 1fr; gap: 20px; }
+            .project-card { padding: 25px; }
+            .project-card h4 { font-size: 20px; }
+            .project-card p { font-size: 16px; }
+            
+            .contact-section { grid-template-columns: 1fr; gap: 30px; margin-top: 40px; }
+            footer h3.section-title { font-size: 32px; }
+            .github-section .btn-premium { width: 100%; justify-content: center; padding: 12px 20px; }
         }
     </style>
 </head>
